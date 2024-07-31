@@ -40,10 +40,10 @@
     "lint": "concurrently \"npm:lint:*\"",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "prebuild": "rimraf bin",
-    "build": "rollup -c --bundleConfigAsCjs",
+    "prebuild": "echo prebuild && rimraf bin",
+    "build": "echo build && rollup -c --bundleConfigAsCjs",
     "prepublishOnly": "NODE_ENV=production npm run build",
-    "prepare": "husky"
+    "prepare": "echo husky && npm run prebuild && npm run prepublishOnly"
   },
   "dependencies": {
     "@babel/core": "7.24.7",
@@ -81,7 +81,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
-    "rimraf": "^5.0.7",
+    "rimraf": "^6.0.1",
     "rollup": "^4.18.0",
     "rollup-plugin-auto-external": "^2.0.0",
     "typescript": "^5.4.5"
