@@ -40,10 +40,10 @@
     "lint": "concurrently \"npm:lint:*\"",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
-    "prebuild": "rimraf bin",
-    "build": "rollup -c --bundleConfigAsCjs",
+    "prebuild": "echo prebuild && rimraf bin",
+    "build": "echo build && rollup -c --bundleConfigAsCjs",
     "prepublishOnly": "NODE_ENV=production npm run build",
-    "prepare": "husky"
+    "prepare": "echo husky && npm run prebuild && npm run prepublishOnly"
   },
   "dependencies": {
     "@babel/core": "7.26.0",
