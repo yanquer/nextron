@@ -78,6 +78,15 @@ const execaOptions: execa.Options = {
         ...execaOptions,
       }
     )
+    mainProcess.on('exit', (code) => {
+      logger.info('main process exit')
+    })
+    // 开发模式下, render 是作为服务进程而不是静态资源启动,
+    // 故当主进程退出时, 开发模式应处理渲染进程的退出
+    mainProcess.on('close', (code) => {
+      logger.info('main process closed')
+      killWholeProcess()
+    })
     mainProcess.unref()
   }
 
@@ -93,21 +102,21 @@ const execaOptions: execa.Options = {
       execaOptions
     )
     child.on('close', () => {
-      process.exit(0)
+      logger.info('render process closed')
+      // process.exit(0)
+      killWholeProcess()
+    })
+    child.on('exit', (code) => {
+      logger.info(`render process exit, ${code}`)
     })
     return child
   }
 
   const killWholeProcess = () => {
-    if (watching) {
-      watching.close(() => {})
-    }
-    if (mainProcess) {
-      mainProcess.kill()
-    }
-    if (rendererProcess) {
-      rendererProcess.kill()
-    }
+    logger.info('kill Whole Process')
+    watching?.close(() => {})
+    mainProcess?.kill()
+    rendererProcess?.kill()
   }
 
   process.on('SIGINT', killWholeProcess)

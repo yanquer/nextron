@@ -5,7 +5,7 @@ import chalk from 'chalk'
 import execa from 'execa'
 import * as logger from './logger'
 import { getNextronConfig } from './configs/getNextronConfig'
-import { useExportCommand } from './configs/useExportCommand'
+// import { useExportCommand } from './configs/useExportCommand'
 
 const args = arg({
   '--mac': Boolean,
@@ -40,13 +40,15 @@ const execaOptions: execa.Options = {
 
     logger.info('Building renderer process')
     await execa('next', ['build', path.join(cwd, rendererSrcDir)], execaOptions)
-    if (await useExportCommand()) {
-      await execa(
-        'next',
-        ['export', '-o', appDir, path.join(cwd, rendererSrcDir)],
-        execaOptions
-      )
-    }
+
+    // 14版本不需要手动导出, 配置 output 为 export 即可
+    // if (await useExportCommand()) {
+    //   await execa(
+    //     'next',
+    //     ['export', '-o', appDir, path.join(cwd, rendererSrcDir)],
+    //     execaOptions
+    //   )
+    // }
 
     logger.info('Building main process')
     await execa(
