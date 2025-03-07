@@ -1,6 +1,6 @@
 {
   "name": "nextron",
-  "version": "9.5.0",
+  "version": "9.5.0-a",
   "description": "⚡ NEXT.js + Electron ⚡",
   "repository": {
     "type": "git",
@@ -43,7 +43,8 @@
     "prebuild": "echo prebuild && rimraf bin",
     "build": "echo build && rollup -c --bundleConfigAsCjs",
     "prepublishOnly": "NODE_ENV=production npm run build",
-    "prepare": "echo husky && npm run prebuild && npm run prepublishOnly"
+    "prepare": "echo husky && npm run prebuild && npm run prepublishOnly",
+    "setVersion": "node ./resources/scripts/auto-set-version.js"
   },
   "dependencies": {
     "@babel/core": "7.26.0",
