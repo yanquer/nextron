@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://npm.pkg.github.com/@babel%2fpreset-env: npm package "preset-env" does not exist under owner "babel"
+  Error: https://npm.pkg.github.com/@babel%2fplugin-transform-class-properties: npm package "plugin-transform-class-properties" does not exist under owner "babel"
       at params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:67029:18)
       at self.callback (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:140883:22)
       at Request.emit (node:events:518:28)
@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "@yanquer/nextron",
-    "version": "9.5.0-c1",
+    "version": "9.5.0-c2",
     "description": "⚡ NEXT.js + Electron ⚡",
     "repository": {
       "type": "git",

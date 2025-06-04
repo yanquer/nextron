@@ -1,6 +1,6 @@
 {
   "name": "@yanquer/nextron",
-  "version": "9.5.0-c2",
+  "version": "9.5.0-d",
   "description": "⚡ NEXT.js + Electron ⚡",
   "repository": {
     "type": "git",
@@ -58,8 +58,8 @@
     "@babel/plugin-transform-runtime": "7.25.9",
     "@babel/preset-env": "7.26.0",
     "@babel/preset-typescript": "7.26.0",
-    "@babel/runtime": "8.0.0-alpha.17",
-    "@babel/runtime-corejs3": "8.0.0-alpha.17",
+    "@babel/runtime": "7.26.0",
+    "@babel/runtime-corejs3": "7.26.0",
     "arg": "5.0.2",
     "babel-loader": "9.2.1",
     "ts-loader": "^9.5.1",
