@@ -12,7 +12,7 @@ const isTs = fs.existsSync(path.join(cwd, 'tsconfig.json'))
 const ext = isTs ? '.ts' : '.js'
 const externals = require(path.join(cwd, 'package.json')).dependencies
 
-const { mainSrcDir } = getNextronConfig()
+const { mainSrcDir, allowTsInNodeModules=false } = getNextronConfig()
 const backgroundPath = path.join(cwd, mainSrcDir || 'main', `background${ext}`)
 const preloadPath = path.join(cwd, mainSrcDir || 'main', `preload${ext}`)
 
@@ -48,7 +48,11 @@ export const baseConfig: webpack.Configuration = {
         exclude: [/node_modules/, path.join(cwd, 'renderer')],
       },
       // 解决默认的加载器不识别 const bindToDefaultContainer = <T>(arg: T){} 这种泛型语法
-      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" },
+      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader",
+        options: {
+          allowTsInNodeModules,
+        },
+      },
 
     ],
   },

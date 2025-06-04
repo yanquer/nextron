@@ -1,6 +1,10 @@
 # CHANGELOG 
 
 
+## 9.5.0-d1
+
+- allowTsInNodeModules
+
 ## 9.5.0-d
 
 - 解决库问题
