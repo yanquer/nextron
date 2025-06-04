@@ -1,18 +1,22 @@
 {
-  "name": "nextron",
+  "name": "@yanquer/nextron",
   "version": "9.5.0-b",
   "description": "⚡ NEXT.js + Electron ⚡",
   "repository": {
     "type": "git",
-    "url": "https://github.com/saltyshiomix/nextron.git"
+    "url": "https://github.com/yanquer/nextron.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "author": {
-    "name": "Shiono Yoshihide",
-    "email": "shiono.yoshihide@gmail.com",
-    "url": "https://github.com/saltyshiomix"
+    "name": "",
+    "email": "",
+    "url": "https://github.com/yanquer/"
   },
   "license": "MIT",
-  "homepage": "https://github.com/saltyshiomix/nextron",
+  "homepage": "https://github.com/yanquer/nextron.git",
   "keywords": [
     "electron",
     "next",
@@ -24,8 +28,8 @@
     "nextron"
   ],
   "bugs": {
-    "url": "https://github.com/saltyshiomix/nextron/issues",
-    "email": "shiono.yoshihide@gmail.com"
+    "url": "https://github.com/yanquer/nextron/issues",
+    "email": ""
   },
   "files": [
     "bin",
