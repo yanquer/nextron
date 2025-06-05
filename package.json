@@ -1,6 +1,6 @@
 {
   "name": "@yanquer/nextron",
-  "version": "9.5.0-d4",
+  "version": "9.5.0-d5",
   "description": "⚡ NEXT.js + Electron ⚡",
   "repository": {
     "type": "git",
@@ -68,7 +68,7 @@
     "fs-extra": "11.3.0",
     "get-port-please": "3.1.2",
     "terser-webpack-plugin": "5.3.11",
-    "ts-loader": "^9.5.1",
+    "ts-loader": "^9.5.2",
     "tsconfig-paths-webpack-plugin": "4.2.0",
     "webpack": "5.97.1",
     "webpack-merge": "6.0.1"

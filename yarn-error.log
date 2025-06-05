@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://npm.pkg.github.com/@babel%2fplugin-transform-runtime: npm package "plugin-transform-runtime" does not exist under owner "babel"
+  Error: https://npm.pkg.github.com/@babel%2fplugin-transform-class-properties: npm package "plugin-transform-class-properties" does not exist under owner "babel"
       at params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:67029:18)
       at self.callback (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:140883:22)
       at Request.emit (node:events:518:28)
@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "@yanquer/nextron",
-    "version": "9.5.0-d",
+    "version": "9.5.0-d5",
     "description": "⚡ NEXT.js + Electron ⚡",
     "repository": {
       "type": "git",
@@ -97,7 +97,7 @@ npm manifest:
       "fs-extra": "11.3.0",
       "get-port-please": "3.1.2",
       "terser-webpack-plugin": "5.3.11",
-      "ts-loader": "^9.5.1",
+      "ts-loader": "^9.5.2",
       "tsconfig-paths-webpack-plugin": "4.2.0",
       "webpack": "5.97.1",
       "webpack-merge": "6.0.1"
@@ -5672,7 +5672,7 @@ Lockfile:
     resolved "https://registry.npmmirror.com/ts-api-utils/-/ts-api-utils-1.3.0.tgz#4b490e27129f1e8e686b45cc4ab63714dc60eea1"
     integrity sha512-UQMIo7pb8WRomKR1/+MFVLTroIvDVtMX3K6OUir8ynLyzB8Jeriont2bTAtmNPa1ekAgN7YPDyf6V+ygrdU+eQ==
   
-  ts-loader@^9.5.1:
+  ts-loader@^9.5.2:
     version "9.5.2"
     resolved "https://registry.npmjs.org/ts-loader/-/ts-loader-9.5.2.tgz#1f3d7f4bb709b487aaa260e8f19b301635d08020"
     integrity sha512-Qo4piXvOTWcMGIgRiuFa6nHNm+54HbYaZCKqc9eeZCLRy3XqafQgwX2F7mofrbJG3g7EEb+lkiR+z2Lic2s3Zw==
