@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://npm.pkg.github.com/@babel%2fcore: npm package "core" does not exist under owner "babel"
+  Error: https://npm.pkg.github.com/@babel%2fplugin-transform-runtime: npm package "plugin-transform-runtime" does not exist under owner "babel"
       at params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:67029:18)
       at self.callback (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:140883:22)
       at Request.emit (node:events:518:28)
@@ -29,7 +29,7 @@ Trace:
 npm manifest: 
   {
     "name": "@yanquer/nextron",
-    "version": "9.5.0-d4",
+    "version": "9.5.0-d",
     "description": "⚡ NEXT.js + Electron ⚡",
     "repository": {
       "type": "git",
@@ -76,7 +76,7 @@ npm manifest:
       "prebuild": "echo prebuild && rimraf bin",
       "build": "echo build && rollup -c --bundleConfigAsCjs",
       "prepublishOnly": "NODE_ENV=production npm run build",
-      "prepare": "echo husky && npm run prebuild && npm run prepublishOnly",
+      "prepare": "husky",
       "setVersion": "node ./resources/scripts/auto-set-version.js"
     },
     "dependencies": {

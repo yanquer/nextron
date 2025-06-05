@@ -12,7 +12,7 @@ const getLatest = () => {
   const readmeContent = fs.readFileSync(readmePath, 'utf8');
 
   // 顶级标题第一个
-  const versionRegex = /#+\s+(\d+\.\d+\.\d+-[a-zA-Z]*)\s*/;
+  const versionRegex = /#+\s+(\d+\.\d+\.\d+-[a-zA-Z0-9]*)\s*/;
   const versionMatch = readmeContent.match(versionRegex);
 
   if (!versionMatch) {
