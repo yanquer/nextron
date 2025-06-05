@@ -1,6 +1,11 @@
 # CHANGELOG 
 
 
+## 9.5.0-d3
+
+- babel依赖更新
+- 属性装饰器支持
+
 ## 9.5.0-d2
 
 - allowTsInNodeModules2
