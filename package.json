@@ -47,7 +47,7 @@
     "prebuild": "echo prebuild && rimraf bin",
     "build": "echo build && rollup -c --bundleConfigAsCjs",
     "prepublishOnly": "NODE_ENV=production npm run build",
-    "prepare": "echo husky && npm run prebuild && npm run prepublishOnly",
+    "prepare": "husky",
     "setVersion": "node ./resources/scripts/auto-set-version.js"
   },
   "dependencies": {

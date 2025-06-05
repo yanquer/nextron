@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://npm.pkg.github.com/@babel%2fplugin-transform-optional-chaining: npm package "plugin-transform-optional-chaining" does not exist under owner "babel"
+  Error: https://npm.pkg.github.com/@babel%2fcore: npm package "core" does not exist under owner "babel"
       at params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:67029:18)
       at self.callback (/usr/local/Cellar/yarn/1.22.17_2/libexec/lib/cli.js:140883:22)
       at Request.emit (node:events:518:28)
