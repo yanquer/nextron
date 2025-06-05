@@ -1,6 +1,10 @@
 # CHANGELOG 
 
 
+## 9.5.0-d4
+
+- 可选使用ts-loader
+
 ## 9.5.0-d3
 
 - babel依赖更新
