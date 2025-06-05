@@ -1,6 +1,10 @@
 # CHANGELOG 
 
 
+## 9.5.0-d2
+
+- allowTsInNodeModules2
+
 ## 9.5.0-d1
 
 - allowTsInNodeModules

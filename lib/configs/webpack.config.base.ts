@@ -48,11 +48,11 @@ export const baseConfig: webpack.Configuration = {
         exclude: [/node_modules/, path.join(cwd, 'renderer')],
       },
       // 解决默认的加载器不识别 const bindToDefaultContainer = <T>(arg: T){} 这种泛型语法
-      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader",
+      allowTsInNodeModules ? { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader",
         options: {
           allowTsInNodeModules,
         },
-      },
+      } : {},
 
     ],
   },
